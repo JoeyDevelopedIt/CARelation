@@ -87,58 +87,174 @@
           This is a simple hero unit, a simple jumbotron-style component for
           calling extra attention to featured content or information.
         </p>
-      </div>
-      <div class="form">
-        <select
-          data-placeholder="&nbsp;Year"
-          class="chzn-select year"
-          style="width:70px;"
-          tabindex="1"
-          id="year"
-        >
-          <option value=""></option>
-          <option value="2014">2014</option>
-          <option value="2011">2011</option>
-          <option value="1990">1990</option> </select
-        ><select
-          data-placeholder="Make"
-          class="chzn-select"
-          style="width:115px;"
-          tabindex="2"
-          id="make"
-        >
-          <option value=""></option>
-          <option value="ACURA">ACURA</option>
-          <option value="VOLVO">VOLVO</option> </select
-        ><select
-          data-placeholder="Model"
-          class="chzn-select"
-          style="width:115px;"
-          tabindex="3"
-          id="model"
-        >
-          <option value=""></option>
-          <option value="COMMANDER">COMMANDER</option>
-          <option value="WRANGLER">WRANGLER</option> </select
-        ><select
-          data-placeholder="Trim"
-          class="chzn-select"
-          style="width:100px;"
-          tabindex="4"
-          id="trim"
-        >
-          <option value=""></option>
-          <option value="LIMITED">LIMITED</option>
-          <option value="RENEGADE">RENEGADE</option>
-        </select>
+        <div class="form">
+          <select
+            data-placeholder="&nbsp;Year"
+            class="chzn-select year"
+            style="width:70px;"
+            tabindex="1"
+            id="year"
+          >
+            <option value=""></option>
+            <option value="2014">2014</option>
+            <option value="1990">1990</option> </select
+          ><select
+            data-placeholder="Make"
+            class="chzn-select"
+            style="width:115px;"
+            tabindex="2"
+            id="make"
+          >
+            <option value=""></option>
+            <option value="ACURA">ACURA</option>
+            <option value="VOLVO">VOLVO</option> </select
+          ><select
+            data-placeholder="Model"
+            class="chzn-select"
+            style="width:115px;"
+            tabindex="3"
+            id="model"
+          >
+            <option value=""></option>
+            <option value="WRANGLER">WRANGLER</option> </select
+          ><select
+            data-placeholder="Trim"
+            class="chzn-select"
+            style="width:100px;"
+            tabindex="4"
+            id="trim"
+          >
+            <option value=""></option>
+            <option value="RENEGADE">RENEGADE</option>
+          </select>
 
-        <div class="checkbox">
-          <label for="checkbox" class="text">Currently Insured?</label>
-          <input type="checkbox" id="checkbox" value="1" checked="checked" />
-          <label class="box" for="checkbox"></label>
+          <!-- <div class="checkbox">
+            <label for="checkbox" class="text">Currently Insured?</label>
+            <input type="checkbox" id="checkbox" value="1" checked="checked" />
+            <label class="box" for="checkbox"></label>
+          </div> -->
+
+          <a href="#" class="button">LET'S GO!</a>
         </div>
+      </div>
 
-        <a href="#" class="button">LET'S GO!</a>
+      <div class="card-group">
+        <!-- CARD 1-->
+        <div class="card" style="width: 18rem;">
+          <img
+            class="card-img-top"
+            src="../public/assets/images/examplepic1.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Car Finder</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              Search By Car
+            </button>
+
+            <!-- Modal 1-->
+            <div class="modal fade" id="exampleModalCenter" role="dialog">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">
+                      Search By Car
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">EXAMPLE</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD 2-->
+        <div class="card" style="width: 18rem;">
+          <img
+            class="card-img-top"
+            src="../public/assets/images/examplepic1.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Car Finder</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" role="dialog">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">
+                      Modal title
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">...</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- container div tag-->
