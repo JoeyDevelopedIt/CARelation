@@ -10,6 +10,10 @@ body {
   height: 100vh;
 }
 
+.jumbotron {
+  margin: 0;
+}
+
 .checkbox {
   height: 41px;
   position: relative;
@@ -96,9 +100,6 @@ a.button:active {
   height: 55px;
   background-color: #5c5c5c;
   border-radius: 2px;
-  margin: 0 0 0 -366px;
   position: absolute;
-  top: 127px;
-  left: 50%;
   padding: 13px 14px 0 14px;
 }
