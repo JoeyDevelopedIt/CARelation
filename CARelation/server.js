@@ -20,10 +20,21 @@ app.use(express.json());
 
 // Static directory
 // app.use(express.static("public"));
+var axios = require("axios");
+app.get("/api/data", function(req,res){
+  axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used&make=ford").then(
+    function(response) {
+      // Then we print out the imdbRating
+      // console.log("The movie's rating is: " + JSON.stringify.response);
+      res.send(response.data)
+    }
+  );
+})
+// We then run the request with axios module on a URL with a JSON
 
 // Routes
 // =============================================================
-require("./routes/html_routes.js")(app);
+// require("./routes/html_routes.js")(app);
 // require("./routes/author-api-routes.js")(app);
 // require("./routes/post-api-routes.js")(app);
 
