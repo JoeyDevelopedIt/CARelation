@@ -1,24 +1,24 @@
 // Here we incorporate the "axios" npm package
 var axios = require("axios");
 
-// We then run the request with axios module on a URL with a JSON
-function fetchCarMakes(year){
-  //modify this api call to take a year and return a last of makes
-  axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used").then(
-    function(response) {
-      // var data = JSON.stringify(response);
-      console.log(response.data);
-      
-    }
-  );
-}
-
 module.exports = function(app) {
-  app.post('/api/make', function(req,res){
+  
+  app.get("/api/data/year", function(req,res){
+    axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used").then(
+      function(response) {
+        res.send(response.data)
+      }
+    );
+  });
+
+  
+  app.post('/api/data/make', function(req,res){
     var year = req.body.year;
-    fetchCarMakes(year)
-    //fetchCarMakes returns list a makes
-    //res should send like of car makes to the frontend (res.json())    
-    res.send("hi")
-  })
+    console.log(year)
+    axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used&year=" + year).then(
+      function(response) {
+        res.send(response.data)
+      }
+  )
+})
 }
