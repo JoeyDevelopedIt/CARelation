@@ -24,7 +24,7 @@ require("./controllers/apicontroller")(app);
 //move this into your controller file
 var axios = require("axios");
 app.get("/api/data", function(req,res){
-  axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used&make=ford").then(
+  axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used").then(
     function(response) {
       // Then we print out the imdbRating
       // console.log("The movie's rating is: " + JSON.stringify.response);
