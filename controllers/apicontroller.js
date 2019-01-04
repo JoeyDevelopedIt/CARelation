@@ -4,7 +4,7 @@ var axios = require("axios");
 // We then run the request with axios module on a URL with a JSON
 function fetchCarMakes(year){
   //modify this api call to take a year and return a last of makes
-  axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=toyota").then(
+  axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used").then(
     function(response) {
       // var data = JSON.stringify(response);
       console.log(response.data);
