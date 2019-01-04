@@ -17,9 +17,16 @@ var PORT = process.env.PORT || 8080;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 // Static directory
-// app.use(express.static("public"));
+app.use(express.static("public"))
+// Routes
+require("./controllers/html-routes")(app);
+require("./controllers/apicontroller")(app);
+
+
+
+
+//move this into your controller file
 var axios = require("axios");
 app.get("/api/data", function(req,res){
   axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used&make=ford").then(
@@ -32,11 +39,6 @@ app.get("/api/data", function(req,res){
 })
 // We then run the request with axios module on a URL with a JSON
 
-// Routes
-// =============================================================
-// require("./routes/html_routes.js")(app);
-// require("./routes/author-api-routes.js")(app);
-// require("./routes/post-api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
