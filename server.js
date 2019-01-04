@@ -17,19 +17,14 @@ var PORT = process.env.PORT || 8080;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
+
+require('./controllers/apicontroller')(app)
 
 // Static directory
-// app.use(express.static("public"));
-var axios = require("axios");
-app.get("/api/data", function(req,res){
-  axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used&make=ford").then(
-    function(response) {
-      // Then we print out the imdbRating
-      // console.log("The movie's rating is: " + JSON.stringify.response);
-      res.send(response.data)
-    }
-  );
-})
+
+
+
 // We then run the request with axios module on a URL with a JSON
 
 // Routes

@@ -1,30 +1,19 @@
-// Basic Node application for requesting data from the OMDB website via axios
-// Here we incorporate the "axios" npm package
 var axios = require("axios");
 
-// We then run the request with axios module on a URL with a JSON
-// axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used").then(
-//   function(response) {
-//     // Then we print out the imdbRating
-//     // var data = JSON.stringify(response);
-//     console.log(response.data);
-    
-
-//     // console.log("The movie's rating is: " + data);
-//   }
-// );
 module.exports = function(app) {
+  var axios = require("axios");
+  var path = require('path')
   app.get('/api/cardata', function(req,res){
     axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used").then(
-  function(response) {
-    // Then we print out the imdbRating
-    // var data = JSON.stringify(response);
-    console.log(response.data);
-    res.json(response.data)
-    
-
-    // console.log("The movie's rating is: " + data);
-  }
-);
+    function(response) {
+      console.log(response.data);
+      res.json(response.data)
+    });
   })
+
+  app.get('/home', function(req,res) {
+    console.log('we hit the home route!!')
+    res.sendFile(path.join(__dirname, '../public/index.html'))
+  })
+
 }
