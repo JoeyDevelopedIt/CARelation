@@ -94,6 +94,8 @@
         <select
           data-placeholder="&nbsp;Year"
           class="chzn-select year"
+          onchange="getUsedCarData.call(this, event)"
+
           style="width:70px;"
           tabindex="1"
           id="year"

@@ -5,17 +5,54 @@ $("#year").on("change", function() {
    $.post('/api/data/make', {year: year})
    .then(function(res){
        console.log(res.listings)
-       //should get a list of car makes
-       //use jquery to update the next select options html with the list of car makes
-       //repeat the whole process for each different option with different routes/api calls
    })
-
 });
 
+// $("#make").on("change", function() {
+//     var make = $(this).val();
+//     console.log(make)
+//     //make an api call with the make
+//     $.post('/api/data/make', {make: make})
+//     .then(function(res){
+//         console.log(res.make)
+//     })
+//  });
+ 
+//  $("#model").on("change", function() {
+//     var model = $(this).val();
+//     console.log(model)
+//     //make an api call with the model
+//     $.post('/api/data/model', {model: model})
+//     .then(function(res){
+//         console.log(res.model)
+//     })
+//  });
 
+//  $("#trim").on("change", function() {
+//     var trim = $(this).val();
+//     console.log(model)
+//     //make an api call with the model
+//     $.post('/api/data/trim', {trim: trim})
+//     .then(function(res){
+//         console.log(res.model)
+//     })
+//  });
 
 $( document ).ready(function() {
-  
+    
+    function getUsedCarData (event) {
+        console.log('I am a new event ===>', event)
+        // axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used&rows=50").then(
+        //     function(response) {
+        //       res.send(response.data)
+        //     }
+        // );
+    }
+
+    $(".year").change(function () {
+        console.log('event from the dropdown ==>', $(this).text)
+    })
+
     $.get('/api/data/year')
     .then(function(res){
         var yearsData = []  
@@ -26,6 +63,7 @@ $( document ).ready(function() {
             }     
         }
         yearsData = yearsData.sort()
+        console.log( 'year DATA ==>', yearsData)
         for(var i = 0; i< yearsData.length; i++){
             var years = document.createElement('option');
             years.value = yearsData[i];

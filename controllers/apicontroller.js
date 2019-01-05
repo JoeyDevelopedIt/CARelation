@@ -4,7 +4,7 @@ var axios = require("axios");
 module.exports = function(app) {
   
   app.get("/api/data/year", function(req,res){
-    axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used").then(
+    axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used&rows=50").then(
       function(response) {
         res.send(response.data)
       }
