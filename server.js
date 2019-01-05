@@ -1,9 +1,6 @@
-// *****************************************************************************
 // Server.js - This file is the initial starting point for the Node/Express server.
 //
-// ******************************************************************************
 // *** Dependencies
-// =============================================================
 var express = require("express");
 
 // Sets up the Express App
@@ -22,8 +19,6 @@ app.use(express.static("public"))
 // Routes
 require("./controllers/html-routes")(app);
 require("./controllers/apicontroller")(app);
-
-
 
 
 //move this into your controller file

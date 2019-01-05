@@ -42,7 +42,6 @@
       media="screen"
       href="assets/css/style.css"
     />
-    <script src="./js/cars.js"></script>
   </head>
 
   <body>
@@ -83,24 +82,27 @@
       </nav>
 
       <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
+        <h1 class="display-4">CARelation</h1>
         <p class="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
+          The go to tool to find the current value of a vehicle based on used car analytics.
         </p>
+      </div>
+      <div id= "apidata">
+
       </div>
       <div class="form">
         <select
           data-placeholder="&nbsp;Year"
           class="chzn-select year"
+          onchange="getUsedCarData.call(this, event)"
+
           style="width:70px;"
           tabindex="1"
           id="year"
         >
           <option value=""></option>
-          <option value="2014">2014</option>
-          <option value="2011">2011</option>
-          <option value="1990">1990</option> </select
+
+        </select
         ><select
           data-placeholder="Make"
           class="chzn-select"
@@ -109,8 +111,7 @@
           id="make"
         >
           <option value=""></option>
-          <option value="ACURA">ACURA</option>
-          <option value="VOLVO">VOLVO</option> </select
+        </select
         ><select
           data-placeholder="Model"
           class="chzn-select"
@@ -119,8 +120,7 @@
           id="model"
         >
           <option value=""></option>
-          <option value="COMMANDER">COMMANDER</option>
-          <option value="WRANGLER">WRANGLER</option> </select
+       </select
         ><select
           data-placeholder="Trim"
           class="chzn-select"
@@ -129,8 +129,6 @@
           id="trim"
         >
           <option value=""></option>
-          <option value="LIMITED">LIMITED</option>
-          <option value="RENEGADE">RENEGADE</option>
         </select>
 
         <div class="checkbox">
@@ -139,15 +137,11 @@
           <label class="box" for="checkbox"></label>
         </div>
 
-        <a href="#" class="button">LET'S GO!</a>
+        <a id = "searchbtn" href="#" class="button">LET'S GO!</a>
       </div>
 
       <!-- container div tag-->
     </div>
-<<<<<<< HEAD:public/index.html
-    
-=======
     <script src="js/cars.js"></script>
->>>>>>> 4a0a3fa4b7d6358f90d293eae1149fdc793d03e9:public/index.html
   </body>
 </html>
