@@ -11,7 +11,9 @@ module.exports = function(app) {
     
     console.log('this is my req.body!!', req.body.vin)
 
-    
+    db.Vin.create({vin: req.body.vin}).then(function(whatWeGotBack){
+      console.log('what we got back!!!', whatWeGotBack);
+    })    
 
     axios.get("https://marketcheck-prod.apigee.net/v1/mds?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&vin=" + req.body.vin +"&latitude=37.998&longitude=-84.522&radius=1000&include_sold=true&exact=true&debug=1").then(function(stuffFromAPI) {
         console.log('stuffFromAPI', stuffFromAPI.data)
@@ -35,6 +37,13 @@ module.exports = function(app) {
       }
     );
   });
+
+  app.get('/allVins', function(req,res){
+    db.Vin.findAll({}).then(function(whatWeGotBack){
+      console.log('what we got back!!!', whatWeGotBack);
+      res.json(whatWeGotBack);
+    });   
+  })
 
   
   app.post('/api/data/make', function(req,res){
