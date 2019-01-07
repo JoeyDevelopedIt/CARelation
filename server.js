@@ -8,6 +8,25 @@ var express = require("express");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+// app.use(function (req, res, next) {
+
+//   // Website you wish to allow to connect
+//   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
+
+//   // Request methods you wish to allow
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+//   // Request headers you wish to allow
+//   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+//   // Set to true if you need the website to include cookies in the requests sent
+//   // to the API (e.g. in case you use sessions)
+//   res.setHeader('Access-Control-Allow-Credentials', true);
+
+//   // Pass to next layer of middleware
+//   next();
+// });
+
 // Requiring our models for syncing
 // var db = require("./models");
 
@@ -23,15 +42,7 @@ require("./controllers/apicontroller")(app);
 
 //move this into your controller file
 var axios = require("axios");
-app.get("/api/data", function(req,res){
-  axios.get("https://marketcheck-prod.apigee.net/v1/search?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&car_type=used").then(
-    function(response) {
-      // Then we print out the imdbRating
-      // console.log("The movie's rating is: " + JSON.stringify.response);
-      res.send(response.data)
-    }
-  );
-})
+
 // We then run the request with axios module on a URL with a JSON
 
 
