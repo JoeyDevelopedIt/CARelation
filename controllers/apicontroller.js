@@ -1,10 +1,18 @@
 // Here we incorporate the "axios" npm package
 var axios = require("axios");
+var db = require('../models');
+
 
 module.exports = function(app) {
 
+
   app.post('/vinTest', function(req,res) {
+    
+    
     console.log('this is my req.body!!', req.body.vin)
+
+    
+
     axios.get("https://marketcheck-prod.apigee.net/v1/mds?api_key=09oZb9G6v9CAkVxHvH2bApAWgXWACx4h&vin=" + req.body.vin +"&latitude=37.998&longitude=-84.522&radius=1000&include_sold=true&exact=true&debug=1").then(function(stuffFromAPI) {
         console.log('stuffFromAPI', stuffFromAPI.data)
         res.json(stuffFromAPI.data)
