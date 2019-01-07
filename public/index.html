@@ -26,6 +26,16 @@
       media="screen"
       href="assets/css/style.css"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous"
+  />
   </head>
 
   <body>
@@ -70,72 +80,15 @@
         <p class="lead">
           The go to tool for dealers to find the current the hottest cars on the market.
         </p>
-        <!-- <form>
-          <div id="search1" class="searchBar">
-            <select style="width:70px;" id="year" required
-            onchange="getUsedCarData.call(this, event)">  
-              <option value="" selected disabled>Year</option>
-            </select
 
+        <input id="vinInput"             
+        class="vinSearchbar"
+        type="text"
+        placeholder="Search by VIN #"></input>
 
-            ><select style="width:115px;" id="make1" disabled required>
-              <option value="" selected disabled>Make</option>
-              <option value=""></option></select
-            ><select style="width:115px;" id="model1" disabled required>
+        <button id="vinSearch" class="searchButton">
+        <i class="fas fa-search"></i></button>
 
-
-              <option value="" selected disabled>Model</option>
-              <option value=""></option></select
-            ><select style="width:100px;" id="trim1" disabled required>
-
-
-              <option value="" selected disabled>Trim</option>
-              <option value=""></option>
-            </select>
-
-          </div>
-
-          <div id="search2" class="searchBar">
-            <select style="width:70px;" id="year2" required
-            onchange="getUsedCarData.call(this, event)">  
-              <option value="" selected disabled>Year</option>
-            </select
-
-            ><select style="width:115px;" id="make2" disabled required>
-              <option value="" selected disabled>Make</option>
-              <option value="ACURA">ACURA</option>
-              <option value="VOLVO">VOLVO</option> </select
-
-
-            ><select style="width:115px;" id="model2" disabled required>
-              <option value="" selected disabled>Model</option>
-              <option value="COMMANDER">COMMANDER</option>
-              <option value="WRANGLER">WRANGLER</option> </select
-            ><select style="width:100px;" id="trim2" disabled required>
-
-
-              <option value="" selected disabled>Trim</option>
-              <option value="LIMITED">LIMITED</option>
-              <option value="RENEGADE">RENEGADE</option>
-            </select>
-          </div>
-          <input
-            type="submit"
-            class="btn btn-primary"
-            id="search1Btn"
-            value="Search Car"
-          />
-
-          <input
-            type="submit"
-            class="btn btn-primary"
-            id="compareCar"
-            value="Compare Cars"
-          />
-         </form> -->
-        <!-- <button type="button" class="btn btn-primary" id="addSearch">+</button> -->
-        <input id="vinInput"></input>
-        <button id="vinSearch">TEST SEARCH VIN</button>
       </div>
 
       <div id='infoDiv'>

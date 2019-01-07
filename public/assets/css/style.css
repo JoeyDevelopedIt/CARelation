@@ -9,39 +9,66 @@ body {
   background-position: center;
   height: 100vh;
 }
-
+nav {
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: rgba(5, 4, 2, 0.8);
+  color: red;
+}
 .content {
-  margin-bottom: 0;
-  background-color: gray;
-  height: 300px;
+  background-color: rgba(5, 4, 2, 0.8);
+  height: 280px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding-top: 30px;
 }
-.searchBar {
-  background-color: pink;
-  height: 50px;
-  margin: auto;
-  line-height: 3em;
+/* changing placeholder text source: https://www.w3schools.com/howto/howto_css_placeholder.asp */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
 }
-#search2 {
-  margin-top: 10px;
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
 }
 .disappear {
   display: none;
 }
-
-.searchBtn {
-  width: 400px;
-  margin-top: 10px;
-}
-
 form {
-  width: 400px;
-  margin: auto;
+  width: 500px;
   display: inline-block;
 }
-
-#addSearch {
-  position: fixed;
-  margin-left: 10px;
-  width: 38px;
+.contentText {
+  color: white;
+  margin-bottom: 40px;
+}
+.resultContent {
+  background-color: rgba(5, 4, 2, 0.7);
+  height: 360px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding-top: 30px;
+}
+.vinSearchbar {
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
   height: 50px;
+}
+.searchButton {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
 }
