@@ -1,9 +1,10 @@
 * {
   text-align: center;
+  font-family: "Rubik", sans-serif;
 }
 body {
   overflow: hidden;
-  background-image: url("../images/carBg.jpg");
+  background-image: url("../images/carBg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -11,14 +12,14 @@ body {
 }
 nav {
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: rgba(5, 4, 2, 0.8);
-  color: red;
 }
+
 .content {
   background-color: rgba(5, 4, 2, 0.8);
-  height: 280px;
-  margin-top: 20px;
+  height: 260px;
+  margin-top: 10px;
   border-radius: 10px;
   padding-top: 30px;
 }
@@ -42,33 +43,185 @@ nav {
 form {
   width: 500px;
   display: inline-block;
+  height: 50px;
 }
 .contentText {
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .resultContent {
-  background-color: rgba(5, 4, 2, 0.7);
-  height: 360px;
-  margin-top: 20px;
+  background-color: rgba(5, 4, 2, 0.8);
+  height: 470px;
+  margin-top: 10px;
   border-radius: 10px;
-  padding-top: 30px;
+  padding-top: 15px;
+  overflow: scroll;
+  display: none;
 }
 .vinSearchbar {
-  background: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   border: none;
   text-align: center;
   color: white;
   border-radius: 5px;
   height: 50px;
+  width: 200px;
 }
 .searchButton {
   background-color: green;
   border: none;
   color: white;
-  padding: 10px;
   cursor: pointer;
   border-radius: 5px;
   height: 50px;
   width: 50px;
+}
+
+.soldCars {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}
+.activeCars {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}
+
+.vinNumDisplay {
+  color: orange;
+  text-align: left;
+  margin-left: 10px;
+  padding-top: 5px;
+  height: 20px;
+}
+
+.carFullName {
+  color: white;
+  font-size: 1.5em;
+  text-align: left;
+  margin-left: 10px;
+  width: 600px;
+  padding-top: 50px;
+}
+
+.vinNumAndCarDisplay {
+  text-align: left;
+}
+
+.totalCarsSoldText {
+  color: red;
+  font-size: 0.8em;
+}
+.totalActiveCarsText {
+  display: inline;
+  color: #00e600;
+  font-size: 0.8em;
+}
+
+.soldCarsTextHeader {
+  display: inline;
+  float: left;
+  margin-left: 300px;
+}
+
+.activeCarsTextHeader {
+  display: inline;
+  float: right;
+  margin-right: 100px;
+}
+
+.carData {
+  background-color: rgba(56, 56, 56, 0.5);
+  border-radius: 5px;
+  height: 120px;
+  width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#navCurrent {
+  color: white;
+  border-radius: 5px;
+}
+#navWhite {
+  color: white;
+}
+.logoText {
+  margin-left: 10px;
+}
+
+.logo {
+  margin-right: 5px;
+}
+
+.numSpan {
+  border-radius: 5px;
+  display: inline;
+}
+#floatedHeadline {
+  display: inline;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 4em;
+}
+
+.floatedImage {
+  width: 60px;
+  height: 60px;
+  margin-top: 3px;
+}
+
+.googleFont {
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 1.5em;
+}
+
+.taglineFont {
+  font-size: 1.2em;
+}
+
+.aboutH1 {
+  text-align: center;
+  color: red;
+  font-size: 1.8em;
+}
+
+.aboutPara {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  text-align: justify;
+  justify-content: center;
+}
+.aboutContent {
+  background-color: rgba(5, 4, 2, 0.8);
+  height: 440px;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding-top: 30px;
+}
+
+.nameContact {
+  font-size: 1.5em;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.linkedIn {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+.contactContent {
+  background-color: rgba(5, 4, 2, 0.8);
+  height: 750px;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding-top: 30px;
 }

@@ -15,17 +15,15 @@ var db = require("./models");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Static directory
-app.use(express.static("public"))
+app.use(express.static("public"));
 // Routes
 require("./controllers/html-routes")(app);
 require("./controllers/apicontroller")(app);
-
 
 //move this into your controller file
 var axios = require("axios");
 
 // We then run the request with axios module on a URL with a JSON
-
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
