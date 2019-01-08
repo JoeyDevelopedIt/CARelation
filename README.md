@@ -14,4 +14,8 @@ Backend NODE
 Various HTTP Calls/Routing
 Saved data searches on the backend
 
+![alt text](frontpage.png "Front Page")
+
+![alt text](Search.png "Search Page")
+
 
