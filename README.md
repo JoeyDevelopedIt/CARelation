@@ -4,15 +4,15 @@ The go to tool for car dealers and business to find the current + hottest cars o
 
 # Developed with
 
-Javascript
-jQuery
-CSS
-Animate.CSS
-Sequalized/MYSQL
-Marketcheck API
-Backend NODE
-Various HTTP Calls/Routing
-Saved data searches on the backend
+Javascript<br/>
+jQuery<br/>
+CSS<br/>
+Animate.CSS<br/>
+Sequalized/MYSQL<br/>
+Marketcheck API<br/>
+Backend NODE<br/>
+Various HTTP Calls/Routing<br/>
+Saved data searches on the backend<br/>
 
 # Front Page
 ![alt text](frontpage.png "Front Page")
