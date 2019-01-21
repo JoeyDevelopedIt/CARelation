@@ -4,7 +4,7 @@
 }
 body {
   overflow: hidden;
-  background-image: url("../images/carBg.png");
+  background-image: url("../images/roadster.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -167,7 +167,7 @@ form {
 }
 #floatedHeadline {
   display: inline;
-  font-family: "Reem Kufi", sans-serif;
+  font-family: 'Wallpoet', cursive;
   font-size: 4em;
 }
 
@@ -178,7 +178,7 @@ form {
 }
 
 .googleFont {
-  font-family: "Reem Kufi", sans-serif;
+  font-family: 'Wallpoet', cursive;
   font-size: 1.5em;
 }
 
@@ -225,3 +225,117 @@ form {
   border-radius: 10px;
   padding-top: 30px;
 }
+@media only screen and (max-width:1025px) {
+  nav {
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .content {
+    height: 200px;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding-top: 10px;
+  }
+  form {
+    width: 100px;
+    display: inline-block;
+    height: 20px;
+  }
+  .contentText {
+    color: white;
+    margin-bottom: 10px;
+  }
+  #floatedHeadline {
+    display: inline;
+    font-family: 'Wallpoet', cursive;
+    font-size: 2.0em;
+  }
+  .googleFont {
+    font-family: 'Wallpoet', cursive;
+    font-size: 0.0em;
+  }
+  .floatedImage {
+    width: 30px;
+    height: 31px;
+  }
+  .taglineFont {
+    font-size: 14.1px;
+    text-align: center;
+  }
+  .vinSearchbar {
+    border: none;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+  }
+  .searchButton {
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+  }
+  .aboutH1 {
+    text-align: center;
+    font-size: 1.0em;
+  }
+
+  .aboutPara {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: justify;
+    justify-content: center;
+    font-size: 0.7em;
+  }
+  .soldCarsTextHeader {
+    /* display: inline; */
+    float: left;
+    margin-left: 0px;
+    font-size: 14px;
+  }
+  .activeCarsTextHeader {
+    /* display: inline; */
+    float: left;
+    margin-left: 0px;
+    font-size: 14px;
+  }
+
+.vinNumDisplay {
+  color: orange;
+  text-align: left;
+  margin-left: 2px;
+  padding-top: 5px;
+  height: 20px;
+  font-size: 11px;
+}
+
+.carFullName {
+  color: white;
+  font-size: 11px;
+  text-align: left;
+  margin-left: 2px;
+  width: 600px;
+  padding-top: 50px;
+}
+.soldCars {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding-left: 2px;
+  padding-right: 3px;
+  border-radius: 5px;
+}
+.activeCars {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding-left: 2px;
+  padding-right: 3px;
+  border-radius: 5px;
+}
+
+};
